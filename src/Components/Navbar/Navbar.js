@@ -12,7 +12,6 @@ const Navbar = () => {
                  <span>signup</span>
                  <span className='medium-round' >login.</span>
               </div>
-            
           </div>
     </div>
   )
