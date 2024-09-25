@@ -5,6 +5,7 @@ import IMG1 from "./boyjobpp.png"
 import IMG2 from "./boyjobpp1.png"
 import IMG3 from "./ladyjobpp.png"
 import IMG4 from "./Dr.png"
+import connectImg from "./connect-peoples.png"
 
 const Home = () => {
   return (

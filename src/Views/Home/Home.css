@@ -1,6 +1,6 @@
 
 .home-info-container{
-    height: 40vh;
+    height: 70vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -107,6 +107,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4vh;
 }
 
 .features span{
@@ -125,9 +126,27 @@
 }
 .features-container span i{
     display: inline;
-    font-size: 2em;
+    font-size: 1.7em;
     cursor: pointer;
         &:hover{
             color: #b091ff;
         }
+}
+
+@media screen  and (max-width:600px){
+    .home-info-container{
+        height: 50vh;
+    }
+
+    .main-heading{
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .profile-container{
+        height: 100vh;
+        flex-direction: column;
+        
+    }
+    
 }
