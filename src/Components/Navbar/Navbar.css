@@ -1,0 +1,32 @@
+.nav-body{
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.brand-heading{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.nav-iteam-container{
+    height: 100%;
+    width: 90%;
+    padding:0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-iten-container{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    font-weight: 800;
+}
+
+.nav-iten-container span{
+    cursor: pointer;
+}
