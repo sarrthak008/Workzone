@@ -36,6 +36,39 @@ const Home = () => {
              <div className='design-txt'>se<i className="ri-search-eye-fill"></i>rch</div>
              <span className='basic-info-text serhg-brif-info'>Unlock your career potential with WorkZone, your one-stop destination for finding the perfect job! Our platform simplifies the job search process, offering a user-friendly experience to help you discover opportunities that match your skills and interests.</span>
         </div>
+        <div className='ind-info'>
+           <h4 className='profile-heading supports'>Tech industry </h4>
+           <div className='indstry-container'>
+               <div className='conpany'>
+                 <span><i class="ri-google-fill"></i> </span>
+                 <span><i class="ri-facebook-fill"></i></span>
+                 <span><i class="ri-discord-fill"></i></span>
+                 <span><i class="ri-windows-fill"></i></span>
+                 <span><i class="ri-firefox-fill"></i></span>
+                 <span><i class="ri-app-store-fill"></i></span>
+                 <span><i class="ri-google-fill"></i> </span>
+                 <span><i class="ri-facebook-fill"></i></span>
+                 <span><i class="ri-discord-fill"></i></span>
+                 <span><i class="ri-windows-fill"></i></span>
+                 <span><i class="ri-firefox-fill"></i></span>
+                 <span><i class="ri-app-store-fill"></i></span>
+                 <span><i class="ri-google-fill"></i> </span>
+                 <span><i class="ri-facebook-fill"></i></span>
+                 <span><i class="ri-discord-fill"></i></span>
+                 <span><i class="ri-windows-fill"></i></span>
+                 <span><i class="ri-firefox-fill"></i></span>
+                 <span><i class="ri-app-store-fill"></i></span>
+                 <span><i class="ri-google-fill"></i> </span>
+                 <span><i class="ri-facebook-fill"></i></span>
+                 <span><i class="ri-discord-fill"></i></span>
+                 <span><i class="ri-windows-fill"></i></span>
+                 <span><i class="ri-firefox-fill"></i></span>
+                 <span><i class="ri-app-store-fill"></i></span>
+              </div>
+            <div className='hide'></div>
+            <div className='hide2'></div>
+           </div>
+        </div>
     </div>
   )
 }

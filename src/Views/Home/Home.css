@@ -148,7 +148,7 @@
 .design-txt{
     font-weight: 800;
     font-size: 7em;
-    color: gray;
+    color: rgb(28, 28, 28);
     letter-spacing: 3vw;
 }
 
@@ -161,6 +161,63 @@
   display: block;
   padding: 2vh 5vw;
 }
+
+.supports{
+    margin-top: 4vh;
+    text-align: center;
+}
+.ind-info{
+    margin-top: 10vh;
+}
+
+.indstry-container{
+    height: 20vh;
+    position: relative;
+    font-size: 3em;
+    width: 100vw;
+}
+
+.conpany{
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    animation: scroll 5s linear infinite;
+}
+.hide{
+    position: absolute;
+    width: 40vw;
+    top: 0;
+    left: -10%;
+    height: 100%;
+    background:linear-gradient( to right,#ffffff,white,#ffffffd6);
+    filter: blur(20px);
+}
+
+.hide2{
+    position: absolute;
+    width: 40vw;
+    top: 0;
+    right: -10%;
+    height: 100%;
+    background:linear-gradient( to left,#ffffff,white,#ffffffd6);
+    filter: blur(20px);
+}
+
+
+@keyframes  scroll {
+     0%{
+        transform: translateX(0%);
+     }
+     100%{
+        transform: translateX(100%);
+     }
+}
+
+
 
 @media screen  and (max-width:600px){
     .home-info-container{
