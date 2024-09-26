@@ -48,7 +48,7 @@ body,html{
   height: 150%;
   width: 150%;
   content: "";
-  background-color:#9e79fa;
+  background-color:#eb79fa;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -56,7 +56,7 @@ body,html{
   transform: translate(-50%,-50%);
   z-index: -1;
   border-radius:34px;
-  animation: btn-animation 2s linear infinite;
+  animation: btn-animation 3s linear infinite;
   transition: all 0.5s linear;
 }
 
@@ -73,7 +73,7 @@ body,html{
   transform: translate(-50%,-50%);
   z-index: -2;
   border-radius:34px;
-  animation: btn-animation 3s linear infinite;
+  animation: btn-animation 2s linear infinite;
   transition: all 0.5s linear;
 }
 

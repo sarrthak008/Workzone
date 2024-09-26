@@ -32,6 +32,10 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <div className='serch-design'>
+             <div className='design-txt'>se<i className="ri-search-eye-fill"></i>rch</div>
+             <span className='basic-info-text serhg-brif-info'>Unlock your career potential with WorkZone, your one-stop destination for finding the perfect job! Our platform simplifies the job search process, offering a user-friendly experience to help you discover opportunities that match your skills and interests.</span>
+        </div>
     </div>
   )
 }
