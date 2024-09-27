@@ -101,3 +101,9 @@ body::-webkit-scrollbar{
   text-decoration: none;
   color: black;
 }
+
+input{
+  border: none;
+  background-color: #c8b3ff3c;
+  outline: none;
+}

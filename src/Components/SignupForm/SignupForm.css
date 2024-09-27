@@ -1,0 +1,66 @@
+
+.signup-form-container{
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+   border-radius:  0% 100% 20% 0% / 100% 0% 100% 10% 
+}
+
+.signup-text{
+    font-size: 2em;
+     color: #b091ff;
+     font-weight: 800;
+}
+
+.signup-image-container{
+    height: 100%;
+    width: 40vw;
+    background-color: #b091ff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.signup-image-container img{
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(2px 2px 4px #8dbbf8);
+    width: 100%;
+}
+.singup-img-txt{
+    text-align: center;
+    margin-top: 3vh;
+    font-weight: 900;
+}
+
+.signup-input{
+    height: 6vh;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    width: 26.5vw;
+    padding: 2px 4px;
+    font-size: 1.1em;
+    border-radius: 4px;
+}
+
+.short-inputs input{
+   width: 12vw;
+}
+
+
+@media screen and (max-width:550px) {
+    .signup-forn-container{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(212, 131, 131);
+       border-radius: 0px; 
+    }
+
+     .signup-image-container{
+        display: none;
+     }
+}

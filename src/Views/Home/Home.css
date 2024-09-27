@@ -175,6 +175,10 @@
     position: relative;
     font-size: 3em;
     width: 100vw;
+     &:hover .conpany{
+        transition: all 5s ease-in-out;
+        animation:scroll 8s linear infinite alternate-reverse;
+     }
 }
 
 .conpany{
@@ -185,7 +189,8 @@
     align-items: center;
     justify-content: center;
     gap: 5vw;
-    animation: scroll 5s linear infinite;
+    animation: scroll 8s linear infinite;
+    transition: all 5s ease-in-out;
 }
 .hide{
     position: absolute;
@@ -237,6 +242,11 @@
     
 .design-txt{
     font-size: 3.5em;
+}
+
+.conpany{
+    gap: 3vw;
+    animation: scroll 3s linear infinite;
 }
     
 }
