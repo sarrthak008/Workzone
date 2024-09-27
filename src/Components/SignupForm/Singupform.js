@@ -1,6 +1,7 @@
 import React from 'react'
 import SIGNUP from "./Signup.png"
 import "./SignupForm.css"
+import { Link } from 'react-router-dom'
 
 const Singupform = () => {
     return (
@@ -16,11 +17,12 @@ const Singupform = () => {
                 <input placeholder='your email id'  className='signup-input'></input>
                 <input placeholder='needed job role' className='signup-input'></input>
                 <input placeholder='set password'  className='signup-input'></input>
-                <span>
+                <span className='check-box'>
                      <input type='checkbox'></input>
                      i agree terms and conditions.
                 </span>
-               <button>Signup</button> 
+               <button className='btn1 signup-btn'>signup</button>
+               <Link className='link' to='/login'><span className='login-link'>already have an account ? login</span></Link>
             </div>
             <div className='signup-image-container'>
                 <img src={SIGNUP}></img>

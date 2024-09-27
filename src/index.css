@@ -107,3 +107,17 @@ input{
   background-color: #c8b3ff3c;
   outline: none;
 }
+
+.btn1{
+  background-color: #b091ff;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+   &:hover{
+    background-color: #7a4ded;
+    color: whitesmoke;
+   }
+}
+
