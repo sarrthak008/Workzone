@@ -77,6 +77,17 @@ body,html{
   transition: all 0.5s linear;
 }
 
+.main-container{
+  height: 100vh;
+  width: 100vw;
+  margin-left: 55px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.main-container::-webkit-scrollbar{
+  display: none;
+}
+
 
 @keyframes btn-animation{
   0%{
@@ -121,3 +132,8 @@ input{
    }
 }
 
+@media screen and (max-width:500px) {
+    .main-container{
+      margin-left: 0px;
+    }
+}

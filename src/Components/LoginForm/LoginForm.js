@@ -11,7 +11,7 @@ const LoginForm = () => {
           <div className='login-inputs-container'>
             <input placeholder='your email id'  className='signup-input'></input>
             <input placeholder='set password'  className='signup-input'></input>
-            <button className='btn1 signup-btn login-btn'>signup</button>
+            <button className='btn1 signup-btn login-btn'>login</button>
           </div>
         <Link to='/signup' className='link'> <span className='login-link'>i dont have an account ? signup</span> </Link>
       </div>
