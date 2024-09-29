@@ -7,7 +7,7 @@ const SearchBar = () => {
    const [placeholder,setplaceholder] =useState('eg. developer')
    const [index,setIndex] = useState(0)
 
-    /*useEffect(()=>{
+  useEffect(()=>{
         let Intervalret = setInterval(()=>{
             if(index<jobNames.length){
                setplaceholder(`eg. ${jobNames[index]}`)
@@ -17,7 +17,7 @@ const SearchBar = () => {
             }
         },3000)
 
-    },[index]) */
+    },[index]) 
    
    
   return (

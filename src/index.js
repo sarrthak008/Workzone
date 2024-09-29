@@ -7,6 +7,7 @@ import 'remixicon/fonts/remixicon.css'
 import Signup from './Views/Signup/Signup';
 import Login from './Views/Login/Login';
 import Search from './Views/Search/Search';
+import { Toaster } from 'react-hot-toast';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,9 @@ root.render(
          <Route path='/login' element={<Login/>}/>
          <Route path='/search' element={<Search/>}/>
       </Routes>
+      <Toaster toastOptions={{
+        className:'notification'
+      }}/>  
   </BrowserRouter>
 );
 

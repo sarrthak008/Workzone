@@ -88,6 +88,10 @@ body,html{
   display: none;
 }
 
+.notification{
+  background-color: red;
+}
+
 
 @keyframes btn-animation{
   0%{
