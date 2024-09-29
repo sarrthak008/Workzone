@@ -38,6 +38,7 @@ const FeedCard = ({info}) => {
               <img src={`${IMGS[Math.floor(Math.random()*IMGS.length)]}`}></img>
             <div className='job-info-overlay'>
                 <span className='company-info'>{info.c_name} , ARE HIRE..</span>
+                <span className='card-sal-info'> get avg. salary {`${info.min_sal}-${info.max_sal} $`}</span>
             </div>
             </div>
         </div>

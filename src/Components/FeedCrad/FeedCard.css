@@ -60,11 +60,13 @@
     justify-content: center;
     position: relative;
     border-radius: 14px;
+    overflow: hidden;
 }
 
 .image-job-card img{
-    height:250px;
+    height:300px;
     object-fit: fill;
+    filter: drop-shadow(10px 10px 30px #053b53);
 }
 
 .job-info-overlay{
@@ -76,14 +78,30 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     background: linear-gradient(to top,#00000052,#55e5fe4e);
+     flex-direction: column;
+     background: linear-gradient(to top,#000000b2,#55e5fe8f);
+}
+
+.image-job-card:hover > img{
+    transform: rotate(10deg) scale(1.1);
+    transition: all .5s ease-in-out;
+    filter: drop-shadow(10px 10px 40px #ecf9fe);
 }
 
 .company-info{
-    font-size: 1.6em;
+    font-size: 2.7em;
     font-weight: 800;
     text-align: center;
-    color: #000000;
+    color: #eaf2f9;
+    text-transform: lowercase;
+    text-wrap: wrap;
+}
+
+.card-sal-info{
+    font-size: 1.2em;
+    color: #d9d7d7;
+    margin-top: 3vh;
+    font-weight: 400;
 }
 
 @media screen and (max-width:500px) {
