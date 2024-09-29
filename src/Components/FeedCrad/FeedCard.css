@@ -10,7 +10,7 @@
 }
 
 .feed-user-info{
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     align-items: start;
@@ -41,6 +41,49 @@
 .feed-card-email{
     font-size: 1em;
     color: gray;
+}
+
+.job-card-image-container{
+    height: 320px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.image-job-card{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 14px;
+}
+
+.image-job-card img{
+    height:250px;
+    object-fit: fill;
+}
+
+.job-info-overlay{
+    height: 100%;
+    width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: linear-gradient(to top,#00000052,#55e5fe4e);
+}
+
+.company-info{
+    font-size: 1.6em;
+    font-weight: 800;
+    text-align: center;
+    color: #000000;
 }
 
 @media screen and (max-width:500px) {
