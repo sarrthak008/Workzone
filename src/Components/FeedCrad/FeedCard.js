@@ -42,6 +42,11 @@ const FeedCard = ({info}) => {
             </div>
             </div>
         </div>
+      <div className='card-btn-cont'>
+        <button className='btn1 apply-btn'>apply</button>
+        <span className='card-other-option'><i class="ri-share-forward-fill"></i></span>
+        <span className='card-other-option'><i class="ri-save-line"></i></span>
+      </div>
     </div> 
   )
 }
