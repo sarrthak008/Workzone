@@ -9,20 +9,20 @@ import Login from './Views/Login/Login';
 import Search from './Views/Search/Search';
 import { Toaster } from 'react-hot-toast';
 import Profile from './Views/Profile/Profile';
+import Setting from './Views/Setting/Setting';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <Toaster/>
       <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/signup' element={<Signup/>}/>
          <Route path='/login' element={<Login/>}/>
          <Route path='/search' element={<Search/>}/>
          <Route path='/profile' element={<Profile/>}/>
-      </Routes>
-      <Toaster toastOptions={{
-        className:'notification'
-      }}/>  
+         <Route path='/setting' element={<Setting/>}/>
+      </Routes> 
   </BrowserRouter>
 );
 

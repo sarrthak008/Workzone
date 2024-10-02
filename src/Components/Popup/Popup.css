@@ -1,0 +1,61 @@
+.popup-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999999999999999;
+    background-color: #7f7e7e81;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-profile-container{
+  height: 60vh;
+  width: 60vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.update-input{
+    height: 7vh;
+    width: 30vw;
+    font-size: 1.1em;
+    padding-left: 4px;
+}
+
+.update-btn{
+    padding: 2vh 8vw;
+    font-size: 1.1em;
+}
+
+.close-btn{
+    font-size: 2em;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    cursor: pointer;
+      &:hover{
+        color: #69bbfa;
+      }
+}
+
+@media screen and (max-width:500px) {
+    .update-profile-container{
+        width: 90vw;
+    }
+    .update-input{
+        height: 7vh;
+        width: 80vw;
+    }
+    .update-btn{
+        padding: 2vh 8.5vw;
+    }
+}

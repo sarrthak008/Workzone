@@ -42,7 +42,8 @@ const Singupform = () => {
         mobNumber,
         email,
         jobRole,
-        conditions
+        conditions,
+        id:USERS.length+1
       })
       localStorage.setItem("USERS", JSON.stringify(USERS))
       toast.success("account created successfully..")
