@@ -1,0 +1,43 @@
+
+.loder-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999999999999999;
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(4px);
+}
+
+.loder-cont{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 90px;
+    width: 90px;
+    border-radius: 4px;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loder{
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 7px solid gray;
+    border-radius: 50%;
+    border-top-color:#b091ff;
+     animation: rotate  1s linear infinite;
+}
+
+@keyframes rotate {
+     0%{
+        transform: rotate(0deg);
+     }100%{
+        transform: rotate(360deg);
+     }
+}
