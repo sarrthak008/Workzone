@@ -9,6 +9,7 @@ const ProfilePopUp = ({setpPopup}) => {
     const [useremail,setusremail] = useState(email)
     const [mobNum,setMobNum] = useState(mobNumber)
      const [imge ,setimge] = useState(null)
+
      const updateProfile = () =>{
          let USERS = JSON.parse(localStorage.getItem('USERS'))
           let findedUser = USERS.find((user)=>{
@@ -25,10 +26,10 @@ const ProfilePopUp = ({setpPopup}) => {
            }else{
              toast.error('please enter valid mobile number')
            }
-
          USERS[id-1] = findedUser
          localStorage.setItem('USERS' , JSON.stringify(USERS))
-        }
+    setpPopup(false)
+    }
 
      const handleFile = (e)=>{
          let file = e.target.files[0]
