@@ -1,0 +1,26 @@
+.setting-body{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.setting-main-body{
+  width: 100%;
+  padding: 2vh;
+  background: #e0e0e0a1;
+  box-shadow:  20px 20px 30px #bebebe2b,
+          -20px -20px 30px #ffffff;
+}
+
+.setting-main-body span{
+    font-size: 1.2em;
+    cursor: pointer; 
+    &:hover{
+        color:#b091ff;
+      }
+}
+
+.pass-popup{
+    gap: 30px;
+}

@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import './Popup.css'
 import toast from 'react-hot-toast'
 
+
+const LOGINUSER = JSON.parse(localStorage.getItem('LOGINUSER'))
+const {email,mobNumber,id} = LOGINUSER
+
 const ProfilePopUp = ({setpPopup}) => {
-     
-    const LOGINUSER = JSON.parse(localStorage.getItem('LOGINUSER'))
-    const {email,mobNumber,id} = LOGINUSER
+    
     const [useremail,setusremail] = useState(email)
     const [mobNum,setMobNum] = useState(mobNumber)
-     const [imge ,setimge] = useState(null)
+    const [imge ,setimge] = useState(null)
 
      const updateProfile = () =>{
          let USERS = JSON.parse(localStorage.getItem('USERS'))
@@ -54,4 +56,48 @@ const ProfilePopUp = ({setpPopup}) => {
   )
 }
 
-export  {ProfilePopUp}
+const PasswordPopUP  = ({setPassPopup})=>{
+
+ 
+ const [newpass , setNewPass] = useState('') 
+ const [oldpass,setOldPass] = useState('')
+
+  const updatePass = ()=>{
+       if(oldpass === LOGINUSER.password){
+          if(newpass.length<5){
+            toast.error('password length must be grater than 5')
+          }else{
+             let USERS = JSON.parse(localStorage.getItem('USERS'))
+             let findedUser = USERS.find((user)=>{
+                return(user.password==oldpass)
+            })
+            findedUser.password=newpass
+            USERS[id-1] = findedUser
+            localStorage.setItem('USERS' , JSON.stringify(USERS))
+           setPassPopup(false)
+          }
+       }
+  }
+
+   return(
+    <>
+      <div className='popup-body'>
+           <div className='update-profile-container pass-popup'>
+            <input className='update-input' placeholder='enter your old password' type='password' value={oldpass} onChange={(e)=>{setOldPass(e.target.value)}}></input>
+            <input className='update-input' placeholder='set a new password' value={newpass} onChange={(e)=>{setNewPass(e.target.value)}}></input>
+            <button className='btn1 update-btn' onClick={()=>{
+              updatePass()
+            }}>update</button>
+            
+            <span className='gray'>next time login with new password</span>
+   
+           <span className='close-btn' onClick={()=>{
+            setPassPopup(false)
+           }}><i class="ri-close-line"></i></span> 
+           </div>
+      </div>
+    </>
+   )
+}
+
+export  {ProfilePopUp ,PasswordPopUP}
