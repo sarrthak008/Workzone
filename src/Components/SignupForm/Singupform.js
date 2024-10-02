@@ -43,7 +43,9 @@ const Singupform = () => {
         email,
         jobRole,
         conditions,
-        id:USERS.length+1
+        id:USERS.length+1,
+        linkdin_URL:'',
+        github_URL:''
       })
       localStorage.setItem("USERS", JSON.stringify(USERS))
       toast.success("account created successfully..")

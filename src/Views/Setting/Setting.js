@@ -3,13 +3,13 @@ import Sidebar from '../../Components/Sidebar/Sidebar'
 import Userprofile from '../../Components/UserProfile/Userprofile'
 import Tagline from '../../Components/TagLine/Tagline'
 import "./Setting.css"
-import { PasswordPopUP } from '../../Components/Popup/Popup'
+import { PasswordPopUP,LinksPopup } from '../../Components/Popup/Popup'
 
 
 const Setting = () => {
 
   const [passPpup,setPassPopup] = useState(false)
-
+  const [linkopopup,setLinkpopup] = useState(false)
   return (
     <div>
       <Sidebar/>
@@ -23,7 +23,9 @@ const Setting = () => {
                      }}>update password <i class="ri-arrow-right-s-line"></i></span>
                   </div>
                   <div className='setting-main-body'>
-                     <span>link accouts <i class="ri-arrow-right-s-line"></i></span>
+                     <span onClick={()=>{
+                       setLinkpopup(true)
+                     }}>link accouts <i class="ri-arrow-right-s-line"></i></span>
                   </div>
 
                   <div className='setting-main-body'>
@@ -41,6 +43,7 @@ const Setting = () => {
             </div>
         </div>
     {passPpup ? <PasswordPopUP setPassPopup={setPassPopup}/> : null}
+    {linkopopup ? <LinksPopup LinksPopuppup={setLinkpopup}/> : null}
     </div>
   )
 }

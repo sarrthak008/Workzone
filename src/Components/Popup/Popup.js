@@ -56,6 +56,8 @@ const ProfilePopUp = ({setpPopup}) => {
   )
 }
 
+
+
 const PasswordPopUP  = ({setPassPopup})=>{
 
  
@@ -100,4 +102,28 @@ const PasswordPopUP  = ({setPassPopup})=>{
    )
 }
 
-export  {ProfilePopUp ,PasswordPopUP}
+
+
+const LinksPopup  = ({LinksPopuppup})=>{
+
+    return(
+     <>
+       <div className='popup-body'>
+            <div className='update-profile-container pass-popup'>
+             <input className='update-input' placeholder='enter your Github profile URL'></input>
+             <input className='update-input' placeholder='enter your Linkdin profile URL'></input>
+             <button className='btn1 update-btn' onClick={()=>{
+             }}>connect</button>
+             
+             <span className='gray'>connect your Linkdin & Github with workZone</span>
+    
+            <span className='close-btn' onClick={()=>{
+             LinksPopuppup(false)
+            }}><i class="ri-close-line"></i></span> 
+            </div>
+       </div>
+     </>
+    )
+ }
+
+export  {ProfilePopUp ,PasswordPopUP,LinksPopup}
