@@ -8,6 +8,7 @@ import Signup from './Views/Signup/Signup';
 import Login from './Views/Login/Login';
 import Search from './Views/Search/Search';
 import { Toaster } from 'react-hot-toast';
+import Profile from './Views/Profile/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
          <Route path='/signup' element={<Signup/>}/>
          <Route path='/login' element={<Login/>}/>
          <Route path='/search' element={<Search/>}/>
+         <Route path='/profile' element={<Profile/>}/>
       </Routes>
       <Toaster toastOptions={{
         className:'notification'

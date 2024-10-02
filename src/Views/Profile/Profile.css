@@ -1,0 +1,14 @@
+.Profile-container{
+    height: 100vh;
+    width: 100vw;
+    margin-left: 55px;
+}
+
+.profile-main-card{
+    height: 40vh;
+    width: 80vw;
+    background: #e0e0e0a1;
+    box-shadow:  20px 20px 30px #bebebe2b,
+            -20px -20px 30px #ffffff;
+    margin:30px auto;
+}
