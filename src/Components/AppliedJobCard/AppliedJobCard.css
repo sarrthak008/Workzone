@@ -1,0 +1,24 @@
+.job-card-body{
+    height: 200px;
+    width: 350px;
+    margin: 2vh 20px;
+    background: #e0e0e0a1;
+    padding: 2vh 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  20px 20px 30px #bebebe2b,
+            -20px -20px 30px #ffffff;
+}
+.job-company-name{
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+.blue-txt{
+    color:#b091ff;
+    cursor: pointer;
+}
+.info-font{
+    font-size: 1.122em;
+    margin-top: 10px;
+}

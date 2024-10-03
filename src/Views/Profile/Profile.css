@@ -1,0 +1,15 @@
+.applied-job-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.status-indicator{
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    width: 100vw;
+    justify-content: center;
+    gap:3vw;
+    font-size: 1.1em;
+}
