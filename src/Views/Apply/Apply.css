@@ -3,7 +3,7 @@
      background: #e0e0e0a1;
     box-shadow:  20px 20px 30px #bebebe2b,
           -20px -20px 30px #ffffff;
-    margin: 5vh auto;
+    margin:10vh auto;
     position: relative;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
 }
 
 .aply-info-btn{
-    margin-top: 5vh;
+    margin: 5vh 0;
 }
 
 .salary-font{
@@ -69,9 +69,16 @@
 @media screen and (max-width:500px) {
     .job-info-container{
         width: 90vw;
+        margin:10vh 2.5vw;
     }
     .back-btn{
         top: 0%;
         left: 0%;
+    }
+    .salary-font{
+        font-size: 1.1em;
+    }
+    .apply-job-desc{
+        font-size: 1em;
     }
 }

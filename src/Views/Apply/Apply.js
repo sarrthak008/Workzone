@@ -10,6 +10,13 @@ const Apply = () => {
   let info = FEED.find((JOB)=>{
     return(JOB.id===id)
   })
+
+ const addppliedJob = () =>{
+  let  APPLIED_JOBS = JSON.parse(localStorage.getItem('APPLIED_JOBS')) || []
+   APPLIED_JOBS.push(info)
+   localStorage.setItem("APPLIED_JOBS",JSON.stringify(APPLIED_JOBS))
+ }
+
   return (
     <>
     <Link to='/search' className='link'> <span className='back-btn'><i class="ri-arrow-left-line"></i></span> </Link>
@@ -33,7 +40,11 @@ const Apply = () => {
                <span className='salary-font'>work location {info.location}</span>
                <span className='salary-font'>add date {info.post_at.split("T")[0]}</span>
             </div>
-            <button className='btn1 apply-btn aply-info-btn'>apply</button>
+            <button className='btn1 apply-btn aply-info-btn'
+              onClick={()=>{
+                 addppliedJob()
+              }}
+            >apply now</button>
             <span className='gray'>please read all information before apply</span>
         </div>
     </div>
