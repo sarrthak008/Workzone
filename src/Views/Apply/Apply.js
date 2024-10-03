@@ -1,18 +1,31 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './Apply.css'    
-import BGIMG from './bg-logo.png'
 import TagLine from '../../Components/TagLine/Tagline'
+
+
 
 const Apply = () => {
   const {id} = useParams()
+
   const FEED  = JSON.parse(localStorage.getItem("FEED"))
   let info = FEED.find((JOB)=>{
     return(JOB.id===id)
   })
 
+ 
+  const getDate = () =>{
+    let date = new Date()
+    let year = date.getFullYear()
+    let month = date.getMonth()
+    let day =date.getDate()
+    return(`${day}/${month+1}/${year}`)
+  }
+
+
  const addppliedJob = () =>{
   let  APPLIED_JOBS = JSON.parse(localStorage.getItem('APPLIED_JOBS')) || []
+   info.date=getDate()
    APPLIED_JOBS.push(info)
    localStorage.setItem("APPLIED_JOBS",JSON.stringify(APPLIED_JOBS))
  }
@@ -45,7 +58,7 @@ const Apply = () => {
                  addppliedJob()
               }}
             >apply now</button>
-            <span className='gray'>please read all information before apply</span>
+            <span className='gray'>please read all information before apply .</span>
         </div>
     </div>
     </>
