@@ -1,0 +1,77 @@
+.job-info-container{
+    width: 80vw;
+     background: #e0e0e0a1;
+    box-shadow:  20px 20px 30px #bebebe2b,
+          -20px -20px 30px #ffffff;
+    margin: 5vh auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-info-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.main-job-info-container{
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    backdrop-filter: blur(100px);
+    padding: 3vh 2vw;
+    background: #e0e0e0a1;
+    box-shadow:  20px 20px 30px #bebebe2b,
+          -20px -20px 30px #ffffff;
+}
+
+.company-info-apply{
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 2vh 0;
+}
+
+.apply-job-desc{
+    font-size: 1.1em;
+}
+.job-other-info-cont{
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aply-info-btn{
+    margin-top: 5vh;
+}
+
+.salary-font{
+    font-size: 1.3em;
+    font-weight: 800;
+}
+
+.back-btn{
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    font-size: 35px;
+    z-index: 99;
+    &:hover{
+        color:#b091ff;
+        cursor: pointer;
+      }
+}
+
+@media screen and (max-width:500px) {
+    .job-info-container{
+        width: 90vw;
+    }
+    .back-btn{
+        top: 0%;
+        left: 0%;
+    }
+}
