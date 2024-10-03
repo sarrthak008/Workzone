@@ -40,10 +40,11 @@ const ProfilePopUp = ({setpPopup}) => {
 
      const handleFile = (e)=>{
          let file = e.target.files[0]
+         if(file){
          let obj = URL.createObjectURL(file)
          setimge(obj)
-        console.log(obj)
-        localStorage.setItem("PROFILE_IMG",obj)
+         localStorage.setItem("PROFILE_IMG",obj) 
+      }
      }
 
   return (
