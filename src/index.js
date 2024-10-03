@@ -10,6 +10,7 @@ import Search from './Views/Search/Search';
 import { Toaster } from 'react-hot-toast';
 import Profile from './Views/Profile/Profile';
 import Setting from './Views/Setting/Setting';
+import Apply from './Views/Apply/Apply';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
          <Route path='/search' element={<Search/>}/>
          <Route path='/profile' element={<Profile/>}/>
          <Route path='/setting' element={<Setting/>}/>
+         <Route path='/apply/:id' element={<Apply/>}/>
       </Routes> 
   </BrowserRouter>
 );

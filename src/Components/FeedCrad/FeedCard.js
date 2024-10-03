@@ -12,6 +12,7 @@ import IMG7 from "./assets/pic7.png"
 import IMG8 from "./assets/pic8.png"
 import IMG9 from "./assets/pic9.png"
 import IMG10 from "./assets/pic10.png"
+import { Link } from 'react-router-dom'
 
 const IMGS = [IMG1,IMG2,IMG3,IMG4,IMG5,IMG6,IMG7,IMG8,IMG9,IMG10]
 
@@ -43,7 +44,7 @@ const FeedCard = ({info}) => {
             </div>
         </div>
       <div className='card-btn-cont'>
-        <button className='btn1 apply-btn'>apply</button>
+      <Link to={`/apply/${info.id}`}  className='link'> <button className='btn1 apply-btn'>apply</button></Link>
         <span className='card-other-option'><i class="ri-share-forward-fill"></i></span>
         <span className='card-other-option'><i class="ri-save-line"></i></span>
       </div>
