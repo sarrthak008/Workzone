@@ -3,8 +3,8 @@ import './Popup.css'
 import toast from 'react-hot-toast'
 
 
-const LOGINUSER = JSON.parse(localStorage.getItem('LOGINUSER'))
-const {email,mobNumber,id} = LOGINUSER
+const LOGINUSER = JSON.parse(localStorage.getItem('LOGINUSER')) || []
+const {email,mobNumber,id,github_URL,linkdin_URL} = LOGINUSER
 
 const ProfilePopUp = ({setpPopup}) => {
     
@@ -21,10 +21,15 @@ const ProfilePopUp = ({setpPopup}) => {
                toast.error('please enter valid email')
            }else{
                findedUser.email = useremail
+               LOGINUSER.email=useremail
+               localStorage.setItem('LOGINUSER',JSON.stringify(LOGINUSER))
            }
 
-           if(mobNum.length ==10){
+           if(mobNum.length == 10){
             findedUser.mobNumber = mobNum
+            LOGINUSER.mobNumber=mobNum
+            localStorage.setItem('LOGINUSER',JSON.stringify(LOGINUSER))
+            
            }else{
              toast.error('please enter valid mobile number')
            }
@@ -74,6 +79,8 @@ const PasswordPopUP  = ({setPassPopup})=>{
                 return(user.password==oldpass)
             })
             findedUser.password=newpass
+            LOGINUSER.password=newpass
+            localStorage.setItem('LOGINUSER',JSON.stringify(LOGINUSER))
             USERS[id-1] = findedUser
             localStorage.setItem('USERS' , JSON.stringify(USERS))
            setPassPopup(false)
@@ -105,14 +112,49 @@ const PasswordPopUP  = ({setPassPopup})=>{
 
 
 const LinksPopup  = ({LinksPopuppup})=>{
+ 
+     
 
+   const [linkdinURL,setLInkdinURL] = useState(linkdin_URL)
+   const [githubURL,steGithubURL]= useState(github_URL)
+
+   const connectAC = () =>{
+      if(linkdinURL.includes("https://www.linkedin.com/")){
+        let USERS = JSON.parse(localStorage.getItem('USERS'))
+        let findedUser = USERS.find((user)=>{
+           return(user.id==id)
+       })
+       findedUser.linkdin_URL=linkdinURL
+       LOGINUSER.linkdin_URL=linkdinURL
+       localStorage.setItem('LOGINUSER',JSON.stringify(LOGINUSER))
+       USERS[id-1] = findedUser
+       localStorage.setItem('USERS' , JSON.stringify(USERS))
+      }else{
+        toast.error('please enter valid linkdin url')
+      }
+
+      if(githubURL.includes('https://github.com/')){
+        let USERS = JSON.parse(localStorage.getItem('USERS'))
+        let findedUser = USERS.find((user)=>{
+           return(user.id==id)
+       })
+       findedUser.github_URL=githubURL
+       LOGINUSER.github_URL=githubURL
+       localStorage.setItem('LOGINUSER',JSON.stringify(LOGINUSER))
+       USERS[id-1] = findedUser
+       localStorage.setItem('USERS' , JSON.stringify(USERS))
+      }
+      LinksPopuppup(false)
+   }
+   
     return(
      <>
        <div className='popup-body'>
             <div className='update-profile-container pass-popup'>
-             <input className='update-input' placeholder='enter your Github profile URL'></input>
-             <input className='update-input' placeholder='enter your Linkdin profile URL'></input>
+             <input className='update-input' placeholder='enter your Github profile URL' value={githubURL} onChange={(e)=>{steGithubURL(e.target.value)}}></input>
+             <input className='update-input' placeholder='enter your Linkdin profile URL' value={linkdinURL} onChange={(e)=>{setLInkdinURL(e.target.value)}}></input>
              <button className='btn1 update-btn' onClick={()=>{
+              connectAC()
              }}>connect</button>
              
              <span className='gray'>connect your Linkdin & Github with workZone</span>
