@@ -115,7 +115,6 @@ const PasswordPopUP  = ({setPassPopup})=>{
 const LinksPopup  = ({LinksPopuppup})=>{
  
      
-
    const [linkdinURL,setLInkdinURL] = useState(linkdin_URL)
    const [githubURL,steGithubURL]= useState(github_URL)
 
@@ -169,4 +168,36 @@ const LinksPopup  = ({LinksPopuppup})=>{
     )
  }
 
-export  {ProfilePopUp ,PasswordPopUP,LinksPopup}
+
+const FeedPopUp = ({feedpopup}) =>{
+
+   const [feednum ,setFeedNum] = useState(20)
+
+  const setfeedSearchNumber = () =>{
+    if(feednum<1 && feednum >21){
+      toast.error('value must be betwwen 1 to 20')
+    }else{
+      localStorage.setItem('RES_NUM',feednum)
+      toast.success('setting saved successfully')
+      feedpopup(false)
+    }
+  }
+
+   return(
+   <>
+    <div className='popup-body'>
+    <div className='update-profile-container pass-popup'>
+    <input className='update-input' placeholder='eg . 10 ,12' type='number' value={feednum} onChange={(e)=>{setFeedNum(e.target.value)}}></input>
+             <button className='btn1 update-btn' onClick={()=>{ 
+               setfeedSearchNumber()
+             }}>set</button>
+    <span className='gray'>set how many result shows in your feed .</span>
+    <span className='close-btn' onClick={()=>{
+      feedpopup(false)
+    }}><i class="ri-close-line"></i></span>
+    </div>
+    </div>
+   </>)
+}
+
+export  {ProfilePopUp ,PasswordPopUP,LinksPopup,FeedPopUp}

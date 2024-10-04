@@ -10,23 +10,24 @@ import toast from 'react-hot-toast'
 const Search = () => {
   const [searchVal, setSearchVal] = useState('');
   const [feed, setFeed] = useState([]);
+  const feedNum = localStorage.getItem('RES_NUM') || 20
 
   useEffect(()=>{
      let oldfeed=JSON.parse(localStorage.getItem('FEED'))  || null
      if(oldfeed){
       setFeed(oldfeed)
-     }     
-
+     }    
   },[])
 
+  
 const searchJob = async (jobName) => {
 
 
     if (!jobName) return toast.error('please enter job role or info related job')
 
     jobName = jobName.replaceAll(" ", "%20");
-    const JOB_URL = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=39dac257&app_key=99a6d028cc6454fda3d0c48041c17ad5&results_per_page=20&what=${jobName}&where=london&content-type=application/json`;
-    const USER_URL = `https://randomuser.me/api/?results=20&nat=IN`;
+    const JOB_URL = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=39dac257&app_key=99a6d028cc6454fda3d0c48041c17ad5&results_per_page=${feedNum}&what=${jobName}&where=london&content-type=application/json`;
+    const USER_URL = `https://randomuser.me/api/?results=${feedNum}&nat=IN`;
 
     try {
        let tid= toast.loading('searching your query')
