@@ -4,10 +4,11 @@ import Userprofile from '../../Components/UserProfile/Userprofile'
 import Tagline from '../../Components/TagLine/Tagline'
 import "./Setting.css"
 import { PasswordPopUP,LinksPopup ,FeedPopUp} from '../../Components/Popup/Popup'
+import { useNavigate } from 'react-router-dom'
 
 
 const Setting = () => {
-
+  const navigate = useNavigate()
   const [passPpup,setPassPopup] = useState(false)
   const [linkopopup,setLinkpopup] = useState(false)
   const [feedpopup,setFeedPopUp] = useState(false)
@@ -37,12 +38,20 @@ const Setting = () => {
                   </div>
 
                   <div className='setting-main-body'>
-                     <span>log out <i class="ri-arrow-right-s-line"></i></span>
+                     <span className='acc-del-option'
+                       onClick={()=>{
+                         localStorage.removeItem('LOGINUSER')
+                         localStorage.removeItem('FEED')
+                         localStorage.removeItem('PROFILE_IMG')
+                         navigate('/')
+
+                       }}
+                    >log out <i class="ri-arrow-right-s-line"></i></span>
                   </div>
 
                   
                   <div className='setting-main-body del'>
-                     <span>delete account <i class="ri-arrow-right-s-line"></i></span>
+                     <span className='acc-del-option'>delete account <i class="ri-arrow-right-s-line"></i></span>
                   </div>
             </div>
         </div>

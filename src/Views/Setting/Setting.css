@@ -29,6 +29,13 @@ input[type=number]::-webkit-inner-spin-button{
   -webkit-appearance: none; 
 }
 
+.acc-del-option{
+   &:hover{
+    color: red !important;
+   }
+
+}
+
 @media screen and (max-width:500px) {
   .setting-body{
     width: 90vw;

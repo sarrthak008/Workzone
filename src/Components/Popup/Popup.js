@@ -71,7 +71,7 @@ const PasswordPopUP  = ({setPassPopup})=>{
  const [oldpass,setOldPass] = useState('')
 
   const updatePass = ()=>{
-       if(oldpass === LOGINUSER.password){
+       if(oldpass == LOGINUSER.password){
           if(newpass.length<5){
             toast.error('password length must be grater than 5')
           }else{
