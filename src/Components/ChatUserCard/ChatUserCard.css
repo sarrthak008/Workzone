@@ -1,0 +1,38 @@
+.chat-user-body{
+    height: 190px;
+    width: 330px;
+    margin: 15px;
+    padding: 10px;
+    background: #e0e0e0a1;
+    box-shadow:  20px 20px 30px #bebebe2b,
+            -20px -20px 30px #ffffff;
+}
+
+.chat-user-profile{
+ height: 10vh;
+}
+
+.user-card-jon-info{
+    text-align: center;
+    font-size:1.04em;
+}
+.user-other-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3vh;
+}
+
+.user-other-info span{
+    &:hover{
+        color: blue;
+        cursor: pointer;
+    }
+}
+
+
+.add-circel-btn{
+    padding: 1vh 3vw;
+    font-size: 1.2em;
+    margin-top: 3vh;
+}

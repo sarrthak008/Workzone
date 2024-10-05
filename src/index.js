@@ -11,6 +11,8 @@ import { Toaster } from 'react-hot-toast';
 import Profile from './Views/Profile/Profile';
 import Setting from './Views/Setting/Setting';
 import Apply from './Views/Apply/Apply';
+import Users from './Views/Users/Users';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +26,7 @@ root.render(
          <Route path='/profile' element={<Profile/>}/>
          <Route path='/setting' element={<Setting/>}/>
          <Route path='/apply/:id' element={<Apply/>}/>
+         <Route path='/users' element={<Users/>}/>
       </Routes> 
   </BrowserRouter>
 );
