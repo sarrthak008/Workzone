@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import "./Signup.css"
 import Singupform from '../../Components/SignupForm/Singupform'
+import Footer from '../../Components/Footer/Footer'
 
 const Signup = () => {
   return (
@@ -12,6 +13,7 @@ const Signup = () => {
                     <Singupform/>
               </div>
         </div>
+        <Footer/>
     </div>
   )
 }

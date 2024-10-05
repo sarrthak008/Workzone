@@ -57,7 +57,7 @@ const Apply = () => {
               onClick={()=>{
                  addppliedJob()
               }}
-            >apply now</button>
+            >apply</button>
             <span className='gray'>please read all information before apply .</span>
         </div>
     </div>

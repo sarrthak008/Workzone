@@ -44,7 +44,7 @@ const FeedCard = ({info}) => {
             </div>
         </div>
       <div className='card-btn-cont'>
-      <Link to={`/apply/${info.id}`}  className='link'> <button className='btn1 apply-btn'>apply</button></Link>
+      <Link to={`/apply/${info.id}`}  className='link'> <button className='btn1 apply-btn'>apply now</button></Link>
         <span className='card-other-option'><i class="ri-share-forward-fill"></i></span>
         <span className='card-other-option'><i class="ri-save-line"></i></span>
       </div>

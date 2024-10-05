@@ -14,12 +14,8 @@ const LoginForm = () => {
  const navigate =useNavigate()
 
   const handleLogin = ()=>{
-      USERS.forEach((USER)=> {
-        if(USER.email === email && USER.password === password){
-             setLOGINUSER(USER)
-        }
-      });
-
+    const loggedInUser = USERS.find((USER) => USER.email === email && USER.password === password);
+    setLOGINUSER(loggedInUser)
     if(LOGINUSER){
       toast.success('login successfully.')
       localStorage.setItem("LOGINUSER",JSON.stringify(LOGINUSER))

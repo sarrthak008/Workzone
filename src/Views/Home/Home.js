@@ -1,11 +1,8 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import "./Home.css"
-import IMG1 from "./boyjobpp.png"
 import IMG2 from "./boyjobpp1.png"
-import IMG3 from "./ladyjobpp.png"
-import IMG4 from "./Dr.png"
-import connectImg from "./connect-peoples.png"
+import Footer from '../../Components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -69,6 +66,7 @@ const Home = () => {
             <div className='hide2'></div>
            </div>
         </div>
+      <Footer/>
     </div>
   )
 }
