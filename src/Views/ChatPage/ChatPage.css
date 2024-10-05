@@ -60,6 +60,49 @@
     color: hwb(0 93% 5%);
 }
 
+.chat-screen{
+    height: 80vh;
+    width: 80%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-screen::-webkit-scrollbar{
+    display: none;
+}
+
+.input-box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.msg-input{
+    height:7vh;
+    width: 40vw;
+    font-size: 1.2em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 1vw;
+}
+
+.send-btn{
+    height:7vh ;
+    border: none;
+    width: 70px;
+    font-size: 2em;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 @media screen and (max-width:500px) {
     .openuser-name{
         font-size: 1.1em;
@@ -68,10 +111,10 @@
     .jobrole{
         font-size: 0.8em;
     }
-
-    .open-user-profile{
-       height: 40px;
-       width: 40px;
+    .msg-input{
+        width: 70vw;
     }
-    
+    .chat-screen{
+        width: 90%;
+    }
 }
