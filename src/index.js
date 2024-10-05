@@ -13,6 +13,7 @@ import Setting from './Views/Setting/Setting';
 import Apply from './Views/Apply/Apply';
 import Users from './Views/Users/Users';
 import Chat from './Views/Chat/Chat';
+import ChatPage from './Views/ChatPage/ChatPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +29,7 @@ root.render(
          <Route path='/apply/:id' element={<Apply/>}/>
          <Route path='/users' element={<Users/>}/>
          <Route path='/chat' element={<Chat/>}/>
+         <Route path='/chatpage/:uuid' element={<ChatPage/>}/>
       </Routes> 
   </BrowserRouter>
 );

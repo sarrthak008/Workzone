@@ -4,6 +4,11 @@
     align-items: center;
     justify-content: center;
 }
+.LINK{
+    display: flex;
+    gap:15px;
+}
+
 .chats-body{
     display: flex;
     height: 10vh;
@@ -16,6 +21,7 @@
     box-shadow:  20px 20px 30px #bebebe2b,
             -20px -20px 30px #ffffff;
 }
+
 
 @media screen and (max-width:500px) {
     .chats-body{

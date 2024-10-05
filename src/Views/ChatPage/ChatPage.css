@@ -1,0 +1,77 @@
+.chat-page-container{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.chat-page-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+.chat-user-header{
+    height: 10vh;
+    width: 100vw;
+    background-color: #b091ff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: aliceblue;
+    white-space: nowrap;
+}
+.open-user-profile{
+    display: block;
+   height: 50px;
+   width: 50px;
+   background-color: black;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.open-user-profile img{
+   height: 100%;
+   width: 100%;
+   object-fit: fill;
+}
+
+.goback{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.open-user-name{
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+.openuser-name{
+    font-size: 1.2em;
+    font-weight: 800;
+}
+.jobrole{
+    font-size: 1em;
+    color: hwb(0 93% 5%);
+}
+
+@media screen and (max-width:500px) {
+    .openuser-name{
+        font-size: 1.1em;
+    }
+
+    .jobrole{
+        font-size: 0.8em;
+    }
+
+    .open-user-profile{
+       height: 40px;
+       width: 40px;
+    }
+    
+}
