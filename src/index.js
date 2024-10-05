@@ -12,7 +12,7 @@ import Profile from './Views/Profile/Profile';
 import Setting from './Views/Setting/Setting';
 import Apply from './Views/Apply/Apply';
 import Users from './Views/Users/Users';
-
+import Chat from './Views/Chat/Chat';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +27,7 @@ root.render(
          <Route path='/setting' element={<Setting/>}/>
          <Route path='/apply/:id' element={<Apply/>}/>
          <Route path='/users' element={<Users/>}/>
+         <Route path='/chat' element={<Chat/>}/>
       </Routes> 
   </BrowserRouter>
 );

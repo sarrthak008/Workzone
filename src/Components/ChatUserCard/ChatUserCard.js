@@ -16,7 +16,8 @@ const ChatUserCard = ({ user }) => {
 const addtoCircle  = (user) =>{
          try {
             let  MY_CIRCLE = JSON.parse(localStorage.getItem("MY_CIRCLE")) || []
-             MY_CIRCLE.push(user)
+             user.jobRole = randomJobName
+             MY_CIRCLE.unshift(user)
              localStorage.setItem('MY_CIRCLE',JSON.stringify(MY_CIRCLE))
              setIsFriend(true)
          } catch (error) {

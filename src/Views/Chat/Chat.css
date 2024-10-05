@@ -1,0 +1,14 @@
+.chats-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: 55px;
+}
+
+
+@media screen and (max-width:500px) {
+    .chats-container{
+        margin-left: 0px;
+        margin-bottom: 10vh;
+    }
+}
