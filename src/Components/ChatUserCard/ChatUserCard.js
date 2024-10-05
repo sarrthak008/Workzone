@@ -11,7 +11,9 @@ const ChatUserCard = ({ user }) => {
       return (jobNames[Math.floor(Math.random() * jobNames.length)])
    }
 
-   const addtoCircle  = (user) =>{
+   const [randomJobName,setrandomJobName] =useState(getJobName())
+
+const addtoCircle  = (user) =>{
          try {
             let  MY_CIRCLE = JSON.parse(localStorage.getItem("MY_CIRCLE")) || []
              MY_CIRCLE.push(user)
@@ -45,13 +47,15 @@ const ChatUserCard = ({ user }) => {
                <span className='feed-card-email'>{user.email}</span>
             </div>
          </div>
-         <div className='user-card-jon-info'><span className='user-card-jon-info'>Passinate {getJobName()}</span></div>
+         <div className='user-card-jon-info'><span className='user-card-jon-info'>Passinate {randomJobName}</span></div>
          <div className='user-other-info'>
             <span><i class="ri-landscape-line"></i> {user.location.city.split("-")[0]}</span>
             <span><i class="ri-cake-line"></i> {user.dob.age}</span>
             <span>{user.gender == "male" ? <i class="ri-men-line"></i> : <i class="ri-women-line"></i>}</span>
          </div>
-         {isFriend ? <button className='btn-2 add-circel-btn' onClick={()=>{removeToCircle(user)}}>remove</button> : <button className='btn1 add-circel-btn' onClick={()=>{addtoCircle(user)}}> add to circle</button>}
+         {isFriend ? <button className='btn-2 add-circel-btn' onClick={(e)=>{ e.preventDefault()
+            removeToCircle(user)}}>remove</button> : <button className='btn1 add-circel-btn' onClick={(e)=>{ e.preventDefault()
+            addtoCircle(user)}}> add to circle</button>}
       </div>
    )
 }

@@ -1,5 +1,5 @@
 .chat-user-body{
-    height: 190px;
+    height: 180px;
     width: 330px;
     margin: 15px;
     padding: 10px;
@@ -35,4 +35,10 @@
     padding: 1vh 3vw;
     font-size: 1.2em;
     margin-top: 3vh;
+}
+
+@media screen and (max-width:500px) {
+    .chat-user-body{
+        height: 200px;
+    }
 }
