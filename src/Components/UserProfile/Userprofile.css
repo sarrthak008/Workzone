@@ -65,6 +65,15 @@
       }
 }
 
+.social-media{
+    display: flex;
+    gap: 20px;
+}
+.social-media i{
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 500px) {
     .Profile-container{
         margin-left: 0px;
